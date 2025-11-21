@@ -1,0 +1,62 @@
+# Esquemas para ignorar directorios generados y archivos comunes en Android
+
+## Directorios y archivos generados
+/build
+/captures
+/.gradle
+/.idea/
+/local.properties
+/personal.xml
+
+# Archivos de caché
+.DS_Store
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/assetWizardSettings.xml
+.idea/libraries/
+.idea/navEditor.xml
+.idea/codeStyles/
+.idea/modules.xml
+
+## Archivos de Firma (Keys)
+# Evita subir tus Keystores o JKS que contienen claves de firma
+*.keystore
+*.jks
+
+## Archivos de Lint
+/lint-results.html
+/lint-results.xml
+
+## Archivos de Debugging
+# Archivos específicos de Android Studio/IDE
+/proguard/
+/ndk-build/
+/cmake-build/
+
+# Ignorar archivos generados por la máquina virtual de Java (JVM)
+*.class
+*.log
+*.lock
+*.jar
+*.war
+*.ear
+*.ser
+*.api_key
+
+# Directorio de salida del APK/Bundle
+/app/release/
+/app/debug/
+/app/outputs/
+
+# Archivos de gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+# Si usas Android Gradle Plugin 8.x o superior, podrías tener el archivo .ide
+.ide
+
+# Archivos del sistema macOS
+.DS_Store
+
+# Archivos de sistema de Windows
+Thumbs.db
