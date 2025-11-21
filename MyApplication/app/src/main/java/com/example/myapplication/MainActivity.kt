@@ -17,17 +17,22 @@ import com.google.android.material.textfield.TextInputEditText
 class MainActivity : AppCompatActivity() {
 
     // Bindear los findByView automaticamente haciendo binding.nombreTexto
-//    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
         Log.d("MainActivity", "Estoy en el onCreate")
 
-        val email = findViewById<EditText>(R.id.eitCorreo)
-        val contr = findViewById<EditText>(R.id.eitPass)
+        // necesario para el binding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val email = binding.eitCorreo
+        val btnLogin = binding.bLogIN
+        val contr = binding.eitPass
+
 
 //        if (android.os.Build.VERSION.SDK_INT > 33) {
 //            val usuario = intent.getSerializableExtra("usuario", Usuario::class.java)
@@ -41,7 +46,6 @@ class MainActivity : AppCompatActivity() {
             email.setText(textoCorreo)
         }
 
-        val btnLogin = findViewById<Button>(R.id.bLogIN)
         btnLogin.setOnClickListener {
             if (email.text.toString() != "" && contr.text.toString() != "") {
                 if (contr.text.toString() == usuario?.contr) {
