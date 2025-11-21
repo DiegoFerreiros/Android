@@ -10,10 +10,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
+    // Bindear los findByView automaticamente haciendo binding.nombreTexto
+//    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         val email = findViewById<EditText>(R.id.eitCorreo)
         val contr = findViewById<EditText>(R.id.eitPass)
-
 
 //        if (android.os.Build.VERSION.SDK_INT > 33) {
 //            val usuario = intent.getSerializableExtra("usuario", Usuario::class.java)
