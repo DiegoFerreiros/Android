@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="titulo_app">Mi App</string>
+    <string name="titulo_registro">Regístrate en Mi App</string>
 </resources>
