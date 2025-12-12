@@ -19,10 +19,42 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+@Preview(showSystemUi = true)
+@Composable
+fun EjemploWeights(modifier: Modifier = Modifier) {
+    Column {
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Black)
+            .weight(1F))
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Red)
+            .weight(5F))
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Green)
+            .weight(1F))
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Blue)
+            .weight(1F))
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Yellow)
+            .weight(1F))
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .background(Color.Magenta)
+            .weight(1F))
+    }
+}
 
 @Preview(showSystemUi = true)
 @Composable
@@ -50,8 +82,8 @@ fun DistribucionFilas(modifier: Modifier = Modifier) {
         ) {
             Box(
                 modifier = Modifier
-                    .width(200.dp)
                     .fillMaxHeight()
+                    .width(200.dp)
                     .background(Color.Blue)
             )
 
